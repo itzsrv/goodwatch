@@ -10,8 +10,8 @@ import com.goodwatch.movieinfoservice.models.Movie;
 @RequestMapping("/api/movies")
 public class MovieInfoResource{
 
-    @RequestMapping("/{userId}")
-    public Movie getMovieInfo(@PathVariable("userId") String userId){
-        return new Movie("11", "kuch kuch hota hai", "romantic");
+    @RequestMapping("/{movieId}")
+    public Movie getMovieInfo(@PathVariable("movieId") String movieId){
+        return new Movie(movieId, "kuch kuch hota hai", "romantic");
     }
 }
