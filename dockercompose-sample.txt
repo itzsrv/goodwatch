@@ -1,0 +1,14 @@
+version: '3'
+services:
+  movie-catalog-service:
+    image: openjdk
+    ports:
+      - 8081:8081
+  movie-info-service:
+    image: openjdk
+    ports:
+      - 8082:8082
+  ratings-data-service:
+    image: openjdk
+    ports:
+      - 8083:8083
