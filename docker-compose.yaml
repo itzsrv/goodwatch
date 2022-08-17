@@ -17,4 +17,10 @@ services:
     build: ./ratings-data-service
     ports:
       - 8083:8083
+  
+  discovery-server:
+    container_name: discovery-server-container
+    build: ./discovery-server
+    ports:
+      - 8085:8085
     
