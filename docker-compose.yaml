@@ -22,5 +22,5 @@ services:
     container_name: discovery-server-container
     build: ./discovery-server
     ports:
-      - 8085:8761
+      - 8761:8761
     
