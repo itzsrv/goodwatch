@@ -25,12 +25,12 @@ public class MovieCatalogResource{
         
 
         //get all rated movieIds - hardcode
-        UserRating ratings = restTemplate.getForObject("http://ratings-data-service:8083/api/ratingdata/users/" + userId, UserRating.class);
+        UserRating ratings = restTemplate.getForObject("http://ratings-data-service/api/ratingdata/users/" + userId, UserRating.class);
 
         return ratings.getRatings().stream().map(rating-> {
            
             //for each movieId, call movieInfo service and get movieInfo  
-            Movie movie = restTemplate.getForObject("http://movie-info-service:8082/api/movies/" + rating.getMovieId(), Movie.class);
+            Movie movie = restTemplate.getForObject("http://movie-info-service/api/movies/" + rating.getMovieId(), Movie.class);
     
     
             //put them all together
